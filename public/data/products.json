@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone X200",
+    "price": 499,
+    "image": "img/smartphone.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Laptop Pro 15",
+    "price": 899,
+    "image": "img/laptop.jpg"
+  }
+]
