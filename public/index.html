@@ -1,25 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Online-Shop</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Handyzubehör — Tech Store</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <h1>Elektronik-Shop</h1>
-    <input type="text" id="search" placeholder="Produkte suchen..." />
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">LOGO</div>
+      <nav>
+        <a href="#">HOME</a>
+        <a href="#">PRODUCTS</a>
+        <a href="#">CONTACT</a>
+      </nav>
+      <div class="cart">🛒</div>
+    </div>
   </header>
 
-  <main id="product-list">
-    <!-- Produkte werden hier angezeigt -->
+  <main class="hero">
+    <div class="container hero-grid">
+      <section class="hero-left">
+        <h1>TECH STORE</h1>
+        <p class="lead">Discover the latest tech products</p>
+        <a class="btn primary" href="#">SHOP NOW</a>
+      </section>
+
+      <section class="hero-right">
+        <div class="phone-wrap">
+          <img src="assets/phone-placeholder.png" alt="phone mock" id="hero-phone">
+        </div>
+      </section>
+    </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Online-Shop</p>
+  <section class="products container">
+    <div class="product-grid">
+      <article class="card">
+        <img src="assets/placeholder.png" alt="headphones" class="card-img">
+        <h3>HEADPHONES</h3>
+        <a class="btn" href="#">SHOP NOW</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/placeholder.png" alt="smartphone" class="card-img">
+        <h3>SMARTPHONE</h3>
+        <a class="btn" href="#">SHOP NOW</a>
+      </article>
+
+      <article class="card">
+        <img src="assets/placeholder.png" alt="laptop" class="card-img">
+        <h3>LAPTOP</h3>
+        <a class="btn" href="#">SHOP NOW</a>
+      </article>
+    </div>
+  </section>
+
+  <footer class="site-footer container">
+    <p>&copy; 2025 Handyzubehör</p>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>

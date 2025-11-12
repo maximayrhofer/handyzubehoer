@@ -1,25 +1,16 @@
-const express = require('express');
-const path = require('path');
-const fs = require('fs');
+import express from "express";
+import path from "path";
+import { fileURLToPath } from "url";
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const app = express();
+
+app.use(express.static(path.join(__dirname, "public")));
+
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
+
 const PORT = 3000;
-
-// Öffentlichen Ordner bereitstellen
-app.use(express.static(path.join(__dirname, 'public')));
-
-// API-Route für Produkte
-app.get('/api/products', (req, res) => {
-  const filePath = path.join(__dirname, 'public', 'data', 'products.json');
-  fs.readFile(filePath, 'utf8', (err, data) => {
-    if (err) {
-      return res.status(500).json({ error: 'Fehler beim Lesen der Produktdaten.' });
-    }
-    res.json(JSON.parse(data));
-  });
-});
-
-// Server starten
-app.listen(PORT, () => {
-  console.log(`🚀 Server läuft unter http://localhost:${PORT}`);
-});
+app.listen(PORT, () => console.log(`🚀 Server running on http://localhost:${PORT}`));

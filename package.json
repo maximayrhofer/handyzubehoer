@@ -1,21 +1,16 @@
 {
-  "name": "onlineshop",
+  "name": "handyzubehoer",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Tech Store Website powered by Express",
+  "main": "server.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
     "dev": "nodemon server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^5.1.0",
-    "express-ejs-layouts": "^2.5.1",
-    "node": "^24.9.0",
-    "nodemon": "^3.1.10",
-    "svelte": "^5.40.0"
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
