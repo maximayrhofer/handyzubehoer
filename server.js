@@ -9,7 +9,8 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
-import products from "./data/products.json" assert { type: "json" };
+import products from "./data/products.json" with { type: "json" };
+
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
