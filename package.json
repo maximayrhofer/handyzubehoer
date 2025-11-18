@@ -1,7 +1,7 @@
 {
-  "name": "handyzubehoer",
+  "name": "handyzubehoer_full",
   "version": "1.0.0",
-  "description": "Tech Store Website powered by Express",
+  "description": "Full Tech Store Website with subpages",
   "main": "server.js",
   "type": "module",
   "scripts": {

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 79.99,
+    "image": "/assets/placeholder.png",
+    "description": "High-quality wireless headphones with noise cancellation.",
+    "details": "Battery life: 30h, Bluetooth 5.0, Fast charging"
+  },
+  {
+    "id": 2,
+    "name": "Smartphone X1",
+    "price": 699.00,
+    "image": "/assets/placeholder.png",
+    "description": "Modern smartphone with incredible performance.",
+    "details": "128GB storage, 8GB RAM, AMOLED display"
+  },
+  {
+    "id": 3,
+    "name": "Ultrabook Pro",
+    "price": 1299.00,
+    "image": "/assets/placeholder.png",
+    "description": "Lightweight laptop with powerful capabilities.",
+    "details": "Intel i7, 16GB RAM, 512GB SSD"
+  }
+]
