@@ -5,6 +5,41 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Kasse — Handyzubehör</title>
   <link rel="stylesheet" href="/css/styles.css">
+  <!-- Neue Inline-Styles für die nicht-interaktiven Zahlungs-Widgets -->
+  <style>
+    /* payment widget design (rein dekorativ, nicht interaktiv) */
+    .payment-widgets {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .payment-widget {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      border-radius: 8px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      /* macht die Widgets nicht anklickbar */
+      pointer-events: none;
+      cursor: default;
+    }
+    .payment-widget .row {
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .payment-widget .icon { font-size: 1.6rem; }
+    .payment-widget .title { font-weight:600; }
+    .payment-widget .meta { font-size: 0.88rem; color:#666; }
+    .note { margin-top:8px; font-size:0.95rem; color:#333; }
+    .visually-hidden {
+      position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap;border:0;margin:-1px;padding:0;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -22,10 +57,61 @@
   <main class="container">
     <h1>Kasse</h1>
     <section class="card">
-      <p>Checkout-Formular folgt hier. (Dies ist ein Platzhalter — Zahlungsintegration ist separat.)</p>
-      <p style="margin-top:12px;">Rechnungs- & Lieferadresse, Zahlungsmethode usw. werden hier erfasst.</p>
+      <!-- Ersetzt: Platzhaltertext durch dekorative, nicht-interaktive Zahlungs-Widgets -->
+      <p class="note">Die unten dargestellten Zahlungsarten dienen nur dem Design und sind nicht interaktiv.</p>
+
+      <div class="payment-widgets" role="group" aria-label="Zahlungsarten (nur Design)">
+        <div class="payment-widget" tabindex="-1" aria-disabled="true">
+          <div class="row">
+            <div class="icon">💳</div>
+            <div class="title">Kreditkarte</div>
+          </div>
+          <div class="meta">Visa, Mastercard — Kartenabwicklung</div>
+        </div>
+
+        <div class="payment-widget" tabindex="-1" aria-disabled="true">
+          <div class="row">
+            <div class="icon">🅿️</div>
+            <div class="title">PayPal</div>
+          </div>
+          <div class="meta">Schnell & sicher über PayPal</div>
+        </div>
+
+        <div class="payment-widget" tabindex="-1" aria-disabled="true">
+          <div class="row">
+            <div class="icon">🏦</div>
+            <div class="title">SEPA-Lastschrift</div>
+          </div>
+          <div class="meta">Bequem per Bankeinzug</div>
+        </div>
+
+        <div class="payment-widget" tabindex="-1" aria-disabled="true">
+          <div class="row">
+            <div class="icon"></div>
+            <div class="title">Apple Pay</div>
+          </div>
+          <div class="meta">Kontaktlos bezahlen mit Apple Pay</div>
+        </div>
+
+        <div class="payment-widget" tabindex="-1" aria-disabled="true">
+          <div class="row">
+            <div class="icon">🤖</div>
+            <div class="title">Google Pay</div>
+          </div>
+          <div class="meta">Schnelle Zahlung über Google Pay</div>
+        </div>
+
+        <div class="payment-widget" tabindex="-1" aria-disabled="true">
+          <div class="row">
+            <div class="icon">⚡</div>
+            <div class="title">SOFORT / Klarna</div>
+          </div>
+          <div class="meta">Direktüberweisung (Sofort)</div>
+        </div>
+      </div>
+
       <div style="margin-top:18px;">
-        <a href="/products" class="btn">Zurück</a>
+        <a href="cart.html" class="btn">Zurück</a>
       </div>
     </section>
   </main>
