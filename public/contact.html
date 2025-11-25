@@ -2,34 +2,50 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kontakt</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/main.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontakt — Handyzubehör</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <div class="logo">LOGO</div>
-    <nav>
-      <a href="/">HOME</a>
-      <a href="/products">PRODUCTS</a>
-      <a href="/contact">CONTACT</a>
-    </nav>
-    <a href="/cart" class="cart">🛒</a>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">LOGO</div>
+      <nav>
+        <a href="/">HOME</a>
+        <a href="/products">PRODUCTS</a>
+        <a href="/contact" aria-current="page">CONTACT</a>
+      </nav>
+      <a href="/cart" class="cart" aria-label="Warenkorb">🛒</a>
+    </div>
+  </header>
 
+  <main class="container">
+    <h1>Kontakt</h1>
 
-<section class="container">
-  <h1>Kontakt</h1>
-  <p>Sie können uns jederzeit per E-Mail erreichen.</p>
-</section>
+    <section class="card">
+      <p>Haben Sie Fragen? Schreiben Sie uns gern eine Nachricht.</p>
 
+      <form id="contact-form" action="mailto:info@example.com" method="post" enctype="text/plain">
+        <div style="margin-bottom:10px">
+          <label for="name">Name</label><br/>
+          <input id="name" name="name" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd"/>
+        </div>
+        <div style="margin-bottom:10px">
+          <label for="email">E-Mail</label><br/>
+          <input id="email" name="email" type="email" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd"/>
+        </div>
+        <div style="margin-bottom:10px">
+          <label for="message">Nachricht</label><br/>
+          <textarea id="message" name="message" rows="6" style="width:100%;padding:8px;border-radius:8px;border:1px solid #ddd"></textarea>
+        </div>
 
-<footer class="site-footer container">
-  <p>&copy; 2025 Handyzubehör — <a href="#">Impressum</a></p>
-</footer>
+        <button type="submit" class="btn">Absenden</button>
+      </form>
+    </section>
+  </main>
 
+  <footer class="site-footer container">
+    <p>&copy; 2025 Handyzubehör — <a href="impressum.html">Impressum</a></p>
+  </footer>
 </body>
 </html>

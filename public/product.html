@@ -2,32 +2,37 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Produktdetails</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/product-detail.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Produkt — Handyzubehör</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <div class="logo">LOGO</div>
-    <nav>
-      <a href="/">HOME</a>
-      <a href="/products">PRODUCTS</a>
-      <a href="/contact">CONTACT</a>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">LOGO</div>
+      <nav>
+        <a href="/">HOME</a>
+        <a href="/products">PRODUCTS</a>
+        <a href="/contact">CONTACT</a>
+      </nav>
+      <a href="/cart" class="cart" aria-label="Warenkorb">🛒</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <nav aria-label="breadcrumb" class="breadcrumb">
+      <a href="/">Home</a> › <a href="/products">Produkte</a> › <span id="breadcrumb-name">Produkt</span>
     </nav>
-    <a href="/cart" class="cart">🛒</a>
-  </div>
-</header>
 
+    <section id="product-detail" class="product-detail-wrapper">
+      <!-- Inhalt wird per JS geladen -->
+    </section>
+  </main>
 
-<section class="container" id="product-detail"></section>
-<script src="/js/product-detail.js"></script>
+  <footer class="site-footer container">
+    <p>&copy; 2025 Handyzubehör — <a href="impressum.html">Impressum</a></p>
+  </footer>
 
-
-<footer class="site-footer container">
-  <p>&copy; 2025 Handyzubehör — <a href="#">Impressum</a></p>
-</footer>
-
+  <script src="/js/product-detail.js" defer></script>
 </body>
 </html>

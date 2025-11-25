@@ -2,34 +2,42 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Einkaufswagen</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <script defer src="js/main.js"></script>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Warenkorb — Handyzubehör</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <div class="logo">LOGO</div>
-    <nav>
-      <a href="/">HOME</a>
-      <a href="/products">PRODUCTS</a>
-      <a href="/contact">CONTACT</a>
-    </nav>
-    <a href="/cart" class="cart">🛒</a>
-  </div>
-</header>
+  <header class="site-header">
+    <div class="container nav">
+      <div class="logo">LOGO</div>
+      <nav>
+        <a href="/">HOME</a>
+        <a href="/products">PRODUCTS</a>
+        <a href="/contact">CONTACT</a>
+      </nav>
+      <a href="/cart" class="cart" aria-label="Warenkorb">🛒</a>
+    </div>
+  </header>
 
+  <main class="container">
+    <h1>Warenkorb</h1>
 
-<section class="container">
-  <h1>Einkaufswagen</h1>
-  <p>Ihr Einkaufswagen ist derzeit leer.</p>
-</section>
+    <section id="cart-contents" class="card">
+      <p>Ihr Warenkorb ist leer.</p>
+    </section>
 
+    <div style="margin-top:18px;">
+      <a href="/products" class="btn">Weiter einkaufen</a>
+      <a href="/checkout" class="btn" style="margin-left:12px;">Zur Kasse</a>
+    </div>
+  </main>
 
-<footer class="site-footer container">
-  <p>&copy; 2025 Handyzubehör — <a href="#">Impressum</a></p>
-</footer>
+  <footer class="site-footer container">
+    <p>&copy; 2025 Handyzubehör — <a href="impressum.html">Impressum</a></p>
+  </footer>
 
+  <script>
+    // kleiner Platzhalter: später localStorage-basierten Warenkorb einbauen
+  </script>
 </body>
 </html>
