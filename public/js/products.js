@@ -9,7 +9,7 @@ fetch('/api/products')
     if (!wrap) return;
     wrap.innerHTML = data.map(p => `
       <article class="card">
-        <img src="${p.image}" alt="${p.name}" class="card-img" />
+        <img src="${p.images[0]}" alt="${p.name}" class="card-img" />
         <h3>${p.name}</h3>
         <p class="muted">${p.description}</p>
         <p style="font-weight:700;margin:10px 0;">${(p.price||0).toFixed(2)} €</p>

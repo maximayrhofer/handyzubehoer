@@ -9,6 +9,12 @@ const app = express();
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
 
+// handle missing favicon to avoid 404 in console
+app.get('/favicon.ico', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'assets', 'placeholder.png'));
+  // oder alternativ: res.status(204).end();
+});
+
 import products from "./data/products.json" with { type: "json" };
 
 
